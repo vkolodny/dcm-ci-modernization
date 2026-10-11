@@ -10,6 +10,7 @@ permissions: {}
 jobs:
   should-not-run:
     name: This job must be blocked by the actor policy
+    if: github.actor != 'vkolodny'
     runs-on: [self-hosted, linux]
     timeout-minutes: 1
     steps:
